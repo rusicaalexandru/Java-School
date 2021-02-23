@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.sql.Array;
+import java.util.*;
 
 public class Laborator1 {
     private static boolean isNumeric(String strNum) {
@@ -43,11 +43,7 @@ public class Laborator1 {
         System.out.println(example);
         System.out.println("Media aritmetica este : " + temp/example.size());
     }
-    public static void ex3() {
-        //Se citește un număr natural cu 5 cifre. Afișați numpărul format după
-        //eliminarea cifrei din mijloc
-
-
+    public static void ex3() { // ready
         ArrayList<Integer> example = new ArrayList<>();
         System.out.print("Introduceti o cifra de lungimea 5 :" );
         String num = in.nextLine();
@@ -64,6 +60,24 @@ public class Laborator1 {
         } else {
             System.out.println("You must insert 5 digit number!");
         }
-
+    }
+    public static void ex4() { // ready
+        System.out.print("Introduceti numarul componentelor : ");
+        int arrNum = in.nextInt();
+        int[] arr = new int[arrNum];
+        for (int i = 0; i < arrNum; i++){ // introducerea datelor
+            System.out.print("Introduceti elementul : ");
+            arr[i] = in.nextInt();
+        }
+        for (int element : arr)
+        {
+            System.out.print(element + " ");
+        }
+        Arrays.sort(arr);
+        System.out.print("\n" + arr[arr.length - 2]  + "/" + arr[arr.length - 1]);
+    }
+    public static void ex5() {// not ready
+        
     }
 }
+
