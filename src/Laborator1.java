@@ -44,7 +44,10 @@ public class Laborator1 {
         System.out.println("Media aritmetica este : " + temp/example.size());
     }
     public static void ex3() { // ready
-        ArrayList<Integer> example = new ArrayList<>();
+        System.out.print("Introduceti cifra : ");
+        int num = in.nextInt();
+        System.out.print(num / 1000 + "" + num % 100);
+        /*ArrayList<Integer> example = new ArrayList<>();// varianta prin string
         System.out.print("Introduceti o cifra de lungimea 5 :" );
         String num = in.nextLine();
         if(num.length() == 5 && isNumeric(num)){
@@ -59,7 +62,7 @@ public class Laborator1 {
             }
         } else {
             System.out.println("You must insert 5 digit number!");
-        }
+        }*/
     }
     public static void ex4() { // ready
         System.out.print("Introduceti numarul componentelor : ");
