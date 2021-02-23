@@ -1,0 +1,2 @@
+public class Laborator2 {
+}
