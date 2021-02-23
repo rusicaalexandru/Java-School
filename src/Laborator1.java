@@ -2,6 +2,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Laborator1 {
+    private static boolean isNumeric(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
     static Scanner in = new Scanner(System.in);
 
     public static void ex1() { // ready
@@ -33,6 +44,26 @@ public class Laborator1 {
         System.out.println("Media aritmetica este : " + temp/example.size());
     }
     public static void ex3() {
-        
+        //Se citește un număr natural cu 5 cifre. Afișați numpărul format după
+        //eliminarea cifrei din mijloc
+
+
+        ArrayList<Integer> example = new ArrayList<>();
+        System.out.print("Introduceti o cifra de lungimea 5 :" );
+        String num = in.nextLine();
+        if(num.length() == 5 && isNumeric(num)){
+            char[] ch = new char[num.length()];
+            for (int i = 0; i < num.length(); i++) {
+                ch[i] = num.charAt(i);
+            }
+            for(int i = 0; i < num.length(); i++){
+                if (!(i == num.length()/2)){
+                    System.out.print(ch[i]);
+                }
+            }
+        } else {
+            System.out.println("You must insert 5 digit number!");
+        }
+
     }
 }
