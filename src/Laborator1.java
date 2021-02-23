@@ -76,8 +76,28 @@ public class Laborator1 {
         Arrays.sort(arr);
         System.out.print("\n" + arr[arr.length - 2]  + "/" + arr[arr.length - 1]);
     }
-    public static void ex5() {// not ready
-        
+    public static void ex5() {// ready
+        System.out.print("Introduceti numarul componentelor : ");
+        int arrNum = in.nextInt();
+        int[] arr = new int[arrNum];
+        for (int i = 0; i < arrNum; i++){ // introducerea datelor
+            System.out.print("Introduceti elementul : ");
+            arr[i] = in.nextInt();
+        }
+
+        for (int o = 0; o < arrNum; o++){
+            int temp = arr[0];
+            for(int i = 0; i < arrNum - 1; i++)
+            {
+                arr[i] = arr[i+1];
+            }
+            arr[arrNum-1] = temp;
+            for (int element : arr)
+            {
+                System.out.print(element + " ");
+            }
+            System.out.print(", ");
+        }
     }
 }
 
