@@ -12,6 +12,7 @@ public class Laborator_Proba_evaluare_nr1 {
         //System.out.println("Suma cifrei :" + sum);
         return sum;
     }
+    //-------------------------------------------------------------------------------------------
     static Scanner in = new Scanner(System.in);
     public static void ex1(){
         int x, a=6,b=7;
@@ -24,6 +25,7 @@ public class Laborator_Proba_evaluare_nr1 {
         *   in urma incrementarii
         */
     }
+    //-------------------------------------------------------------------------------------------
     public static void ex2(){
         int x=4;
         System.out.println("valoarea este "+((x > 4) ? 99.99:9));
@@ -35,6 +37,7 @@ public class Laborator_Proba_evaluare_nr1 {
         *   : este in loc de else
         */
     }
+    //-------------------------------------------------------------------------------------------
     public static void ex3(){
         int num1, num2;
         System.out.println("Introduceti nr1 :");
@@ -46,6 +49,44 @@ public class Laborator_Proba_evaluare_nr1 {
             System.out.println("Suma numerelor coencid");
         } else {
             System.out.println("Suma numerelor nu coencid");
+        }
+    }
+    //-------------------------------------------------------------------------------------------
+    public static void ex4(){
+        //cîte 2 atribute și 2 metode
+        class Transport{
+            int nivelSecuritate;
+            int popularitate;
+        }
+        class Automobil extends Transport{
+            String denumire;
+            int lungime;
+        }
+        class Roata extends Automobil{
+            int dimensiuni;
+            int rezistenta;
+        }
+        class Shofer extends Automobil{
+            String nume;
+            String prenume;
+        }
+    }
+    //-------------------------------------------------------------------------------------------
+    public static void ex5(){
+        class Student{
+            String nume;
+            int age;
+            int nr_matricola;
+            int media;
+            Student(String _nume, int _age,int _nr_matricola, int _media){
+                nume = _nume;
+                age = _age;
+                nr_matricola = _nr_matricola;
+                media = _media;
+            }
+            protected void sayHi(){
+                System.out.println()
+            }
         }
     }
 }
