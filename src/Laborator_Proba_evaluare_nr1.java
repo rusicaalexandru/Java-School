@@ -84,8 +84,26 @@ public class Laborator_Proba_evaluare_nr1 {
                 nr_matricola = _nr_matricola;
                 media = _media;
             }
-            protected void sayHi(){
-                System.out.println()
+            protected void sayBuna_dimineata(){
+                System.out.println(nume + " : Buna dimineata");
+            }
+            protected void sayBuna_ziua(){
+                System.out.println(nume + " : Buna ziua");
+            }
+            protected void sayBuna_seara(){
+                System.out.println(nume + " : Buna seara");
+            }
+            protected void sayNoapte_buna(){
+                System.out.println(nume + " : Noapte buna!");
+            }
+            public void sayHi(int hour){
+                switch(hour){
+                    
+                }
+            }
+            public Boolean areBursa(int nota){
+                if (nota > 5) return true;
+                return false;
             }
         }
     }
