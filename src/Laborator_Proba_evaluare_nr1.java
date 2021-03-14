@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Laborator_Proba_evaluare_nr1 {
@@ -66,44 +67,94 @@ public class Laborator_Proba_evaluare_nr1 {
             int dimensiuni;
             int rezistenta;
         }
-        class Shofer extends Automobil{
+        class Shofer {
             String nume;
             String prenume;
         }
     }
     //-------------------------------------------------------------------------------------------
-    public static void ex5(){
-        class Student{
+    public static void ex5() {
+        class Student {
             String nume;
             int age;
             int nr_matricola;
             int media;
-            Student(String _nume, int _age,int _nr_matricola, int _media){
+
+            Student(String _nume, int _age, int _nr_matricola, int _media) {
                 nume = _nume;
                 age = _age;
                 nr_matricola = _nr_matricola;
                 media = _media;
             }
-            protected void sayBuna_dimineata(){
-                System.out.println(nume + " : Buna dimineata");
-            }
-            protected void sayBuna_ziua(){
-                System.out.println(nume + " : Buna ziua");
-            }
-            protected void sayBuna_seara(){
-                System.out.println(nume + " : Buna seara");
-            }
-            protected void sayNoapte_buna(){
-                System.out.println(nume + " : Noapte buna!");
-            }
-            public void sayHi(int hour){
-                switch(hour){
-                    
+
+            public void sayHi(int hour) {
+                if (hour > 5 || hour <= 10) {
+                    System.out.println(nume + " : Buna dimineata");
+                } else if (hour > 10 || hour <= 19) {
+                    System.out.println(nume + " : Buna ziua");
+                } else if (hour > 19 || hour <= 22) {
+                    System.out.println(nume + " : Buna seara");
+                } else {
+                    System.out.println(nume + " : Noapte buna");
                 }
             }
-            public Boolean areBursa(int nota){
-                if (nota > 5) return true;
+
+            public Boolean areBursa() {
+                if (media >= 7) return true;
                 return false;
+            }
+
+            public void setName(String set_name) {
+                nume = set_name;
+            }
+
+            public void setAge(int set_age) {
+                age = set_age;
+            }
+
+            public void setNr_matricola(int set_nr_matricola) {
+                nr_matricola = set_nr_matricola;
+            }
+
+            public void setMedia(int set_media) {
+                media = set_media;
+            }
+
+            //---------
+            public String getName() {
+                return nume;
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public int getNr_matricola() {
+                return nr_matricola;
+            }
+
+            public int getMedia() {
+                return media;
+            }
+        }
+        ArrayList<Student> list = new ArrayList<Student>();
+        System.out.println("Citi studenti veti introduce?");
+        int nrStudenti = in.nextInt();
+        for (int i = 0; i < nrStudenti; i++) {//introducerea studentilor
+            System.out.println("Numele :");
+            String name = in.nextLine();
+            System.out.println("Virsta :");
+            int age = in.nextInt();
+            System.out.println("Matricola :");
+            int matricola = in.nextInt();
+            System.out.println("Media :");
+            int media = in.nextInt();
+            System.out.println("------------------------------------------------------");
+            list.add(new Student(name, age, matricola, media));
+        }
+        for (Student stud : list){// arata care din studenti are bursa
+            if (stud.areBursa()) {
+                System.out.print(stud.nume + " : are bursa");
             }
         }
     }
