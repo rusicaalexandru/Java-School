@@ -9,5 +9,37 @@ public class Main {
         for(int i = 0; i < tablou.length; i++){
             tablou[i] = in.nextInt();
         }
+        Outer out = new Outer(tablou);
+        out.display();
+        Outer.Inner iner = out.new Inner();
+    }
+}
+class Outer{
+    int[] array;
+    void display(){
+        Inner iner = new Inner();
+        iner.min();
+        iner.average();
+        iner.sumEven();
+    }
+    Outer(int[] arr){
+        array = arr;
+    }
+    class Inner{
+        void min(){
+            for(int i = 0; i< array.length; i++){
+
+            }
+        }
+        void average(){
+            for(int i = 0; i< array.length; i++){
+
+            }
+        }
+        void sumEven(){
+            for(int i = 0; i< array.length; i++){
+
+            }
+        }
     }
 }
