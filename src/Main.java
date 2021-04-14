@@ -1,4 +1,5 @@
 public class Main {
+    //-----------------------------------------------------------------------
     public static void punctuA(){
         String str = "abecedar abc defg zxy space libe";
         int pozitiaCaracterului = 3;
@@ -6,6 +7,7 @@ public class Main {
         System.out.println(str.indexOf(caracterul));
         System.out.println(str.charAt(pozitiaCaracterului));
     }
+    //-----------------------------------------------------------------------
     public static void punctuB(){
         //Case sens
         String s1Case = "Space";
@@ -24,30 +26,35 @@ public class Main {
             System.out.println(false);
         }
     }
+    //-----------------------------------------------------------------------
     public static void punctuC(){
         String sir = "i will fl in to the space";
         String subSir = "space";
         if (sir.contains(subSir)) System.out.println(true);
     }
+    //-----------------------------------------------------------------------
     public static void punctuD(){
         String sir = "abecedar carte masina lapte soare";
         String subSir = "carte";
         System.out.println(sir.indexOf(subSir));
     }
+    //-----------------------------------------------------------------------
     public static void punctuE(){
         //wuuut?
     }
+    //-----------------------------------------------------------------------
     public static void punctuF(){
         String fraza = "Spacing space at the edge of the empire after new suset at the cliff";
-        int nr_de_cuvinte = 0;
+        int nr_de_cuvinte = 1;
         for (int i = 0; i < fraza.length(); i++) {
             if(fraza.charAt(i) == ' ' || fraza.charAt(i) == '-'){
                 nr_de_cuvinte++;
             }
         }
-        System.out.println(nr_de_cuvinte + 1);
+        System.out.println(nr_de_cuvinte);
     }
+    //-----------------------------------------------------------------------
     public static void main(String args[]){
-        punctuF();
+        punctuA();
     }
 }
