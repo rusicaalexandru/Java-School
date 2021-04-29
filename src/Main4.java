@@ -12,17 +12,11 @@ class Fer extends JFrame implements ActionListener
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JLabel et=new JLabel("Selectati materia:");
         x.add(et);
-        JRadioButton
-                b1=new
-                JRadioButton("Matematica");
+        JRadioButton b1=new JRadioButton("Matematica");
         x.add(b1);
-        JRadioButton
-                b2=new
-                JRadioButton("Informatica");
+        JRadioButton b2=new JRadioButton("Informatica");
         x.add(b2);
-        JRadioButton
-                b3=new
-                JRadioButton("Engleza");
+        JRadioButton b3=new JRadioButton("Engleza");
         x.add(b3);
         JRadioButton b4=new JRadioButton("Alta materie");
         x.add(b4);
@@ -36,8 +30,7 @@ class Fer extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e){
         Enumeration enum1=grup.getElements();
         while(enum1.hasMoreElements()){
-            JRadioButton
-                    b=(JRadioButton)enum1.nextElement();
+            JRadioButton b=(JRadioButton)enum1.nextElement();
             if(b.isSelected())
                 System.out.println(b.getText());
         }
