@@ -10,7 +10,6 @@ public class Minesweeper extends JFrame {
     private JLabel statusbar;
 
     public Minesweeper() {
-
         initUI();
     }
 
@@ -22,19 +21,15 @@ public class Minesweeper extends JFrame {
         add(new Board(statusbar));
 
         setResizable(false);
-        pack();
+        pack(); //resize to the right size
 
-        setTitle("Minesweeper");
+        setTitle("Techies");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static void main(String[] args) {
-
-        EventQueue.invokeLater(() -> {
-
-            var ex = new Minesweeper();
-            ex.setVisible(true);
-        });
+        var ex = new Minesweeper();
+        ex.setVisible(true);
     }
 }
