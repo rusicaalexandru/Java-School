@@ -29,7 +29,6 @@ public class Minesweeper extends JFrame {
     }
 
     public static void main(String[] args) {
-        var ex = new Minesweeper();
-        ex.setVisible(true);
+        new Minesweeper().setVisible(true);
     }
 }
